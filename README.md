@@ -15,3 +15,6 @@ Alphabet: aáàảãạăaáàảãạăắằẳẵặâấầẩẫậbcdđeé
         $ python WikiExtractor.py --no-templates -s --lists viwiki-20180801-pages-articles.xml -q -o - | perl -CSAD -Mutf8 cleaner.pl > viwik18.txt
 
 
+## viwik19 dataset
+
+Checkout the new dataset `viwik19` at https://github.com/NTT123/viwik18/tree/viwik19
