@@ -574,7 +574,8 @@ class Extractor(object):
                 if out == sys.stdout:   # option -a or -o -
                     line = line.encode('utf-8')
                 out.write(line)
-                out.write('\n')
+                out.write("\n")
+            out.write('= END OF PAGE =\n\n')
             #out.write(footer)
 
     def extract(self, out):
@@ -2539,7 +2540,7 @@ def compact(text):
             if options.toHTML:
                 page.append("<h%d>%s</h%d>" % (lev, title, lev))
             if title and title[-1] not in '!?':
-                title += '.'    # terminate sentence.
+                title = m.group(0) # += '.\n'    # terminate sentence.
             headers[lev] = title
             # drop previous headers
             for i in list(headers.keys()):
